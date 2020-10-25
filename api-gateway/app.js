@@ -1,3 +1,12 @@
+/*
+============================================
+; Title:  app.js
+; Author: Dan Ross
+; Date:   18 October 2020
+; Description: API Gateway
+;===========================================
+*/
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
