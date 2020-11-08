@@ -14,12 +14,12 @@ const { Router } = require('express');
 
 //Register a new user on POST
 exports.user_register = function(req, res) {
-    var hashedPassword = bcrypt.hashSync(rq.body.password, 8);
+    var hashedPassword = bcrypt.hashSync(req.body.password, 8);
 
     var newUser = new User({
         username: req.body.username,
         password: hashedPassword,
-        email: require.body.email
+        email: req.body.email
     });
 
     User.add(newUser, (err, user) => {
