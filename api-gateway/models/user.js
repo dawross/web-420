@@ -25,4 +25,10 @@ module.exports.getById = (id, callback) => {
     User.findById(query, callback);
 }
 
-var User= module.exports = mongoose.model('User', userSchema);
+//get by email
+module.exports.getOne = (e, callback) => {
+    var query = {email: e};
+    User.findOne(query, callback);
+}
+
+var User = module.exports = mongoose.model('User', userSchema);
